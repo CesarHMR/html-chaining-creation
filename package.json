@@ -1,0 +1,27 @@
+{
+  "name": "html-chaining-creation",
+  "version": "1.0.0",
+  "description": "Create HTML elements quickly in typescript using function chainingusing.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && cls && node dist/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CesarHMR/html-chaining-creation.git"
+  },
+  "keywords": [
+    "html"
+  ],
+  "author": "Cesar Henrique Martins da Rosa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CesarHMR/html-chaining-creation/issues"
+  },
+  "homepage": "https://github.com/CesarHMR/html-chaining-creation#readme",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.4"
+  }
+}

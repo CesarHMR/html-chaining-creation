@@ -35,3 +35,5 @@ export default class CreateHTMLElement{
         return this._element as T
     }
 }
+
+module.exports = CreateHTMLElement
