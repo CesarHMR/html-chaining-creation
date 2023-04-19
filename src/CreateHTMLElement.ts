@@ -41,7 +41,7 @@ export class CreateHTMLElement{
         return this
     }
 
-    public SetAtribute(name: string, value: string){
+    public setAttribute(name: string, value: string){
         this._element.setAttribute(name, value)
         return this
     }

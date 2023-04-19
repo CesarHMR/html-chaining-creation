@@ -10,16 +10,16 @@ After importing the **CreateHTMLElement** class, you must create a new CreateHTM
 
 Follow the example bellow:
 ```
-let gridCanva = new CreateHTMLElement('div').SetId('grid-canva').GetElementAs<HTMLDivElement>()
+let navBar = new CreateHTMLElement('div').SetId('nav-bar').GetElementAs<HTMLDivElement>()
 
-let button: HTMLButtonElement[] = []
+let buttons: HTMLButtonElement[] = []
 
-for(let i = 0: i < 10; i++){
+for(let i = 0; i < 10; i++){
 
 	let button = new CreateHTMLElement('button')
-	.SetClass('canva-button')
+	.SetClass('nav-button')
 	.AddEventListener('click', () => console.log('hello world!'))
-	.AppendTo(gridCanva)
+	.AppendTo(navBar)
 	.GetElementAs<HTMLButtonElement>()
 
 	buttons.push(button)
