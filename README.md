@@ -2,6 +2,8 @@
 
 Create HTML elements quickly in Typescript using function chaining.
 
+```npm i html-chaining-creation```
+
 ### How To Use It?
 
 After importing the **CreateHTMLElement** class, you must create a new CreateHTMLElement instance and pass the key of the element you want to create *(div, button, p, h1...)*. From that is possible to use all the [available funtions](#available-functions) of the package to set the element with the desired attributes. The last function MUST BE the **GetElementAs<T<T>>()** function, since is the function that return the element itself. If this is not done, the object returned is a CreateHTMLElement. The generic type <T> must be the desired HTML element type *(HTMLDivElement, HTMLButtonElement, HTMLImageElement...)*.
