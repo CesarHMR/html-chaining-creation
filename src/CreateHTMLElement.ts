@@ -1,8 +1,10 @@
 export class CreateHTMLElement{
-    _element: HTMLElement
+    _element
+    _type
 
-    constructor(elementType: string){
-        this._element = document.createElement(elementType)
+    constructor(elementTag: keyof HTMLElementTagNameMap ){
+        this._element = document.createElement(elementTag)
+        this._type = elementTag
         return this
     }
 
@@ -46,7 +48,77 @@ export class CreateHTMLElement{
         return this
     }
 
-    public GetElementAs<T>(){
-        return this._element as T
+    public setSource(src: string){
+        if('src' in this._element) {
+            this._element.src = src
+        }
+        return this
+    }
+
+    public SetName(name: string){
+        if('name' in this._element) {
+            this._element.name = name
+        }
+        return this
+    }
+
+    public SetTarget(target: string){
+        if('target' in this._element) {
+            this._element.target = target
+        }
+        return this
+    }
+
+    public SetValue(value: string){
+        if('value' in this._element) {
+            this._element.value = value
+        }
+        return this
+    }
+
+    public SetType(type: string){
+        if('type' in this._element){
+            (this._element as HTMLInputElement).type = type
+        }
+        return this
+    }
+
+    public SetMaxValue(max: string){
+        if('max' in this._element){
+            this._element.max = max
+        }
+        return this
+    }
+
+    public SetMinValue(min: string){
+        if('min' in this._element){
+            this._element.min = min
+        }
+        return this
+    }
+
+    public SetMaxLenght(maxLength: number){
+        if('maxLength' in this._element){
+            this._element.maxLength = maxLength
+        }
+        return this
+    }
+
+    public SetMinLenght(minLength: number){
+        if('minLength' in this._element){
+            this._element.minLength = minLength
+        }
+        return this
+    }
+
+    public SetPlaceholder(placeholder: string){
+        if('placeholder' in this._element){
+            this._element.placeholder = placeholder
+        }
+        return this
+    }
+
+    public GetElement(){
+        return this._element
     }
 }

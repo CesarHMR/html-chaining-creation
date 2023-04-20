@@ -30,11 +30,11 @@ for(let i = 0; i < 10; i++){
 
 Because the ideia is to create HTML elements, not every existing function of an HTMLElement is available, only the ones that make sense in the context of an element creation. See bellow all possible functions and its correspondent native functions:
 
-- **SetId(id: string)** > element id = id
+- **SetId(id: string)** > element.id = id
 - **SetClass(className: string)** > element.className = className
 - **AddClass(className: string)** > element.classlist.add(classname)
 - **AppendTo(parent: HTMLElement)** > parent.appendChild(element)
 - **AddEventListener(event: string, callback: Function)** > element.addEventListener(event, () => callback)
-- **SetInnerHTML(innerHTML: string)** -> element.innerHTML = innerHTML
-- **SetInnerText(innerText: string)** -> element.innerText = innerText
-- **SetAtribute(name: string, value: string)** -> element.setAttribute(name, value)
+- **SetInnerHTML(innerHTML: string)** > element.innerHTML = innerHTML
+- **SetInnerText(innerText: string)** > element.innerText = innerText
+- **SetAtribute(name: string, value: string)** > element.setAttribute(name, value)
