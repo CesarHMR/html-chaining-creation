@@ -1,10 +1,8 @@
-export class CreateHTMLElement{
+export class CreateHTMLElement<T extends keyof HTMLElementTagNameMap>{
     _element
-    _type
 
-    constructor(elementTag: keyof HTMLElementTagNameMap ){
-        this._element = document.createElement(elementTag)
-        this._type = elementTag
+    constructor(elementTag: T){
+        this._element = document.createElement<T>(elementTag)
         return this
     }
 
@@ -97,14 +95,14 @@ export class CreateHTMLElement{
         return this
     }
 
-    public setMaxLenght(maxLength: number){
+    public setMaxLength(maxLength: number){
         if('maxLength' in this._element){
             this._element.maxLength = maxLength
         }
         return this
     }
 
-    public setMinLenght(minLength: number){
+    public setMinLength(minLength: number){
         if('minLength' in this._element){
             this._element.minLength = minLength
         }
@@ -118,7 +116,15 @@ export class CreateHTMLElement{
         return this
     }
 
+    public setVolume(volume: number){
+        if('volume' in this._element){
+            this._element.volume = volume
+        }
+        return this
+    }
+
     public getElement(){
+
         return this._element
     }
 }
