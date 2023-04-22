@@ -4,7 +4,7 @@ Create HTML elements quickly in Typescript using function chaining.
 
 ### How to install it?
 
-Use the npm install command to install the library
+Use the npm install command to install the package.
 
 ```
 npm i html-chaining-creation
@@ -12,7 +12,7 @@ npm i html-chaining-creation
 
 ### How to use it?
 
-First it is nedded to import **CreateHTMLElement** class from "html-chaining-creation". To create a html element, you need to create a new instance of CreateHTMLElement and pass the string key of the element you want to create *('div', 'button', 'p', 'h1'...)*. From that is possible to chain all the [available funtions](#available-functions) of the package to set a series of attributes of the element *('id', 'className', 'src'...)*. Finally, the last function of the chain MUST BE the **getElement()** function, since is the function that returns the HTML element itself, otherwise the chain will return the CreateHTMLElement instance.
+First you need to import **CreateHTMLElement** class from "html-chaining-creation". To create a html element, create a new instance of CreateHTMLElement and pass the string key of the element you want to create *('div', 'button', 'p', 'h1'...)*. From that is possible to chain all the [available funtions](#available-functions) of the package to set a series of attributes of the element *('id', 'className', 'src'...)*. Finally, the last function of the chain MUST BE the **getElement()** function, since is the function that returns the HTML element itself. Otherwise the chain will return the CreateHTMLElement instance.
 
 Follow the example bellow:
 
@@ -55,6 +55,6 @@ Because the ideia is to create HTML elements, not every existing function of an 
 - **setMaxValue(max: string)** > element.max = max
 - **setMinValue(min: string)** > element.min = min
 - **setMaxLength(maxLength: number)** > element.maxLength = maxLength
-- **setMinLength(MinLength: number)** > element.MinLength = MinLength
+- **setMinLength(minLength: number)** > element.minLength = minLength
 - **setPlaceholder(placeholder: string)** > element.placeholder = placeholder
 - **setVolume(volume: number)** > element.volume = volume

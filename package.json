@@ -1,6 +1,6 @@
 {
   "name": "html-chaining-creation",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Create HTML elements quickly in typescript using function chainingusing.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

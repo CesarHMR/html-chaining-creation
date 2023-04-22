@@ -50,6 +50,10 @@ export class CreateHTMLElement<T extends keyof HTMLElementTagNameMap>{
         if('src' in this._element) {
             this._element.src = src
         }
+        else{
+            this.DoesNotHaveAttribute('src')
+        }
+
         return this
     }
 
@@ -57,6 +61,10 @@ export class CreateHTMLElement<T extends keyof HTMLElementTagNameMap>{
         if('name' in this._element) {
             this._element.name = name
         }
+        else{
+            this.DoesNotHaveAttribute('name')
+        }
+
         return this
     }
 
@@ -64,6 +72,10 @@ export class CreateHTMLElement<T extends keyof HTMLElementTagNameMap>{
         if('target' in this._element) {
             this._element.target = target
         }
+        else{
+            this.DoesNotHaveAttribute('target')
+        }
+
         return this
     }
 
@@ -71,6 +83,10 @@ export class CreateHTMLElement<T extends keyof HTMLElementTagNameMap>{
         if('value' in this._element) {
             this._element.value = value
         }
+        else{
+            this.DoesNotHaveAttribute('value')
+        }
+
         return this
     }
 
@@ -78,6 +94,10 @@ export class CreateHTMLElement<T extends keyof HTMLElementTagNameMap>{
         if('type' in this._element){
             (this._element as HTMLInputElement).type = type
         }
+        else{
+            this.DoesNotHaveAttribute('type')
+        }
+
         return this
     }
 
@@ -85,6 +105,10 @@ export class CreateHTMLElement<T extends keyof HTMLElementTagNameMap>{
         if('max' in this._element){
             this._element.max = max
         }
+        else{
+            this.DoesNotHaveAttribute('max')
+        }
+
         return this
     }
 
@@ -92,6 +116,10 @@ export class CreateHTMLElement<T extends keyof HTMLElementTagNameMap>{
         if('min' in this._element){
             this._element.min = min
         }
+        else{
+            this.DoesNotHaveAttribute('min')
+        }
+
         return this
     }
 
@@ -99,6 +127,10 @@ export class CreateHTMLElement<T extends keyof HTMLElementTagNameMap>{
         if('maxLength' in this._element){
             this._element.maxLength = maxLength
         }
+        else{
+            this.DoesNotHaveAttribute('maxLength')
+        }
+
         return this
     }
 
@@ -106,6 +138,10 @@ export class CreateHTMLElement<T extends keyof HTMLElementTagNameMap>{
         if('minLength' in this._element){
             this._element.minLength = minLength
         }
+        else{
+            this.DoesNotHaveAttribute('minLength')
+        }
+
         return this
     }
 
@@ -113,6 +149,10 @@ export class CreateHTMLElement<T extends keyof HTMLElementTagNameMap>{
         if('placeholder' in this._element){
             this._element.placeholder = placeholder
         }
+        else{
+            this.DoesNotHaveAttribute('placeholder')
+        }
+
         return this
     }
 
@@ -120,11 +160,18 @@ export class CreateHTMLElement<T extends keyof HTMLElementTagNameMap>{
         if('volume' in this._element){
             this._element.volume = volume
         }
+        else{
+            this.DoesNotHaveAttribute('volume')
+        }
+
         return this
     }
 
     public getElement(){
-
         return this._element
+    }
+
+    private DoesNotHaveAttribute(attributeName: string) {
+        console.warn(`This HTML element does not have a "${attributeName}" attribute!`)
     }
 }
